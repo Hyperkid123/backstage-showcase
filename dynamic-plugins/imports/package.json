@@ -14,5 +14,8 @@
     "@backstage/cli": "0.23.1",
     "tar": "6.1.12"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "@janus-idp/backstage-plugin-quay": "1.4.2",
+    "@janus-idp/backstage-plugin-ocm": "3.3.1"
+  }
 }

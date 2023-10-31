@@ -16,6 +16,18 @@ import {
 } from '@janus-idp/backstage-plugin-ocm';
 import { isType } from '../../utils';
 import { entityWarningContent } from '../Content/EntityWarning';
+// import getMountPointData from '../../../../utils/dynamicUI/getMountPointData';
+
+// // TODO: Improve mapping
+// const ClusterContextProvider = getMountPointData<React.ComponentType>(
+//   'catalog-entity-page-resource/kubernetes-cluster/cluster-provider',
+// )[0];
+// const ClusterInfoCard = getMountPointData<React.ComponentType>(
+//   'catalog-entity-page-resource/kubernetes-cluster/cluster-info-card',
+// )[0];
+// const ClusterAvailableResourceCard = getMountPointData<React.ComponentType>(
+//   'catalog-entity-page-resource/kubernetes-cluster/cluster-available-resources',
+// )[0];
 
 export const resourcePage = (
   <EntityLayout>

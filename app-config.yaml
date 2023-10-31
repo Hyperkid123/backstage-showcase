@@ -342,3 +342,28 @@ enabled:
 
 dynamicPlugins:
   rootDirectory: dynamic-plugins-root
+  frontend:
+    janus-idp.backstage-plugin-quay:
+      mountPoints:
+        - mountPoint: image-registry
+          module: QuayPlugin
+          importName: QuayPage
+    janus-idp.backstage-plugin-ocm:
+      dynamicRoutes:
+        - path: /ocm
+          importName: OcmPage
+          module: OcmPlugin
+          menuItem:
+            icon: Storage
+            text: Clusters
+      mountPoints:
+        - mountPoint: catalog-entity-page-resource/kubernetes-cluster/cluster-provider
+          module: OcmPlugin
+          importName: ClusterContextProvider
+        - mountPoint: catalog-entity-page-resource/kubernetes-cluster/cluster-info-card
+          module: OcmPlugin
+          importName: ClusterAvailableResourceCard
+        - mountPoint: catalog-entity-page-resource/kubernetes-cluster/cluster-available-resources
+          module: OcmPlugin
+          importName: EntityCatalogGraphCard
+          height: 400
